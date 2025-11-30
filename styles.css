@@ -1,9 +1,33 @@
 body {
     background-color: #e5ebfb;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
     margin: 0 20% 0 20%;
 
     text-align: center;
+}
+
+footer {
+    width: 100vw;
+    margin-top: 4rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .cards {
@@ -15,7 +39,7 @@ body {
 
 .card {
     border: 1px solid #000;
-    border-radius: 8px;
+    border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0.2rem;
     padding: 1rem;
@@ -24,6 +48,10 @@ body {
 }
 .card-text {
     text-align: left;
+}
+.video {
+    border-radius: 1rem;
+    width: 60vw;
 }
 
 p {
