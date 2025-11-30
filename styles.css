@@ -1,3 +1,35 @@
+
+
+:root {
+    --side-margin: 0 20% 0 20%; 
+    --text-align: center;
+    
+    --h1-font-size: 3rem;
+    --h2-font-size: 1.7rem;
+    --p-font-size: 1.5rem;
+    
+    --card-direction: row;
+    --card-width: 33%;
+    
+    --video-width: 100%;
+}
+
+@media (max-width: 600px) {
+    :root{
+        --side-margin: 0 5% 0 5%;
+        --text-align: left;
+        
+        --h1-font-size: 2rem;
+        --h2-font-size: 1.5rem;
+        --p-font-size: 1rem;
+        
+        --card-direction: column;
+        --card-width: auto;
+        
+        --video-width: 100%;
+    }
+}
+
 body {
     background-color: #e5ebfb;
     font-family: Arial, sans-serif;
@@ -6,9 +38,9 @@ body {
 }
 
 main {
-    margin: 0 20% 0 20%;
+    margin: var(--side-margin);
 
-    text-align: center;
+    text-align: var(--text-align);
 }
 
 footer {
@@ -16,7 +48,6 @@ footer {
     margin-top: 4rem;
     padding: 0.5rem 0;
     border-top: 1px solid #ccc;
-    font-size: 0.9rem;
     color: #666;
     text-align: center;
 }
@@ -34,7 +65,7 @@ a:hover {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
-    flex-direction: row;
+    flex-direction: var(--card-direction);
 }
 
 .card {
@@ -44,26 +75,28 @@ a:hover {
     margin: 0.2rem;
     padding: 1rem;
     transition: transform 0.2s;
-    width: 33%;
+    width: var(--card-width);
 }
 .card-text {
     text-align: left;
 }
 .video {
     border-radius: 1rem;
-    width: 60vw;
+    width: var(--video-width);
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: var(--p-font-size);
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: var(--h1-font-size);
+    text-align: center;
 }
 
 h2 {
-    font-size: 1.7rem;
+    font-size: var(--h2-font-size);
+    text-align: center;
 }
 
 div {
